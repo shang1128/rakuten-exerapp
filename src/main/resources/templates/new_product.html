@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>New Product</title>
+</head>
+<body>
+<form action="#" th:action="@{/new-product}" th:object="${product}" method="POST">
+    <input type="text" th:field="*{name}" placeholder="product name">
+    <input type="text" th:field="*{brand}" placeholder="product brand">
+    <input type="number" th:field="*{discountPrice}" placeholder="product discount price">
+    <input type="number" th:field="*{price}" placeholder="product price">
+    <input type="submit">
+</form>
+</body>
+</html>
