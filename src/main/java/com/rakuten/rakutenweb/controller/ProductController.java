@@ -39,5 +39,17 @@ public class ProductController {
         productService.saveProduct(product);
         return "redirect:/";
     }
+    @GetMapping("/update-product{id}")
+    public String updateProduct(@PathVariable(value = "id") long id, Model model){
+        Product product = productService.updateProductById(id);
+        model.addAttribute("product", product);
+        return "update_product";
+    }
+    @GetMapping("/delete-product{id}")
+    public String deleteProduct(@PathVariable(value = "id") long id){
+        productService.deleteProductById(id);
+        return "redirect:/";
+    }
+
 
 }

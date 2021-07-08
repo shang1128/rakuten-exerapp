@@ -7,4 +7,6 @@ import com.rakuten.rakutenweb.model.Product;
 public interface IProductService {
     List<Product> getAllProducts();
     void saveProduct(Product product);
+    Product updateProductById(long id);
+    void deleteProductById(long id);
 }
