@@ -15,10 +15,10 @@
     align-items: center">
 <h1>Add Product</h1>
 <form action="#" th:action="@{/new-product}" th:object="${product}" method="POST" style="gap:10px" class="d-flex flex-column justify-content-start">
-    <input type="text" th:field="*{name}" placeholder="product name" class="form-control">
-    <input type="text" th:field="*{brand}" placeholder="product brand" class="form-control">
-    <input type="number" th:field="*{discountPrice}" placeholder="product discount price" class="form-control">
-    <input type="number" th:field="*{price}" placeholder="product price" class="form-control">
+    <input type="text" th:field="*{name}" placeholder="product name" class="form-control" required>
+    <input type="text" th:field="*{brand}" placeholder="product brand" class="form-control" required>
+    <input type="number" th:field="*{discountPrice}" placeholder="product discount price" class="form-control" required>
+    <input type="number" th:field="*{price}" placeholder="product price" class="form-control" required>
     <input type="submit" class="btn btn-info">
 </form>
 

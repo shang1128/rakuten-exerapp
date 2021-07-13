@@ -14,12 +14,12 @@
     flex-direction: column;
     align-items: center">
     <h1>Update Product</h1>
-<form action="#" th:action="@{/update-product{id}(id=${product.id})}" th:object="${product}" method="POST" style="gap:10px" class="d-flex flex-column justify-content-start">
-    <input type="hidden" th:field="*{id}" class="form-control">
-    <input type="text" th:field="*{name}" class="form-control">
-    <input type="text" th:field="*{brand}" class="form-control">
-    <input type="number" th:field="*{discountPrice}" class="form-control">
-    <input type="number" th:field="*{price}" class="form-control">
+<form action="#" th:action="@{/new-product}" th:object="${product}" method="POST" style="gap:10px" class="d-flex flex-column justify-content-start">
+    <input type="hidden" th:field="*{id}" class="form-control" required>
+    <input type="text" th:field="*{name}" class="form-control" required>
+    <input type="text" th:field="*{brand}" class="form-control" required>
+    <input type="number" th:field="*{discountPrice}" class="form-control" required>
+    <input type="number" th:field="*{price}" class="form-control" required>
 
     <input type="submit" value="Update" class="btn btn-info">
 </form>
