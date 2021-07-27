@@ -11,7 +11,7 @@
 	<groupId>com.rakuten</groupId>
 	<artifactId>rakuten-web</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>rakuten-web</name>
 	<description>Rakuten Spring Boot Web application</description>
 <!--	<properties>-->
@@ -19,7 +19,8 @@
 <!--	</properties>-->
 	<properties>
 		<!-- The main class to start by executing java -jar -->
-		<start-class>com.mkyong.SpringBootWebApplication</start-class>
+		<java.version>11</java.version>
+		<start-class>com.rakuten.rakutenweb</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -34,11 +35,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

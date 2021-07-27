@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Register</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+</head>
+<body>
+<div style="margin: 90px auto;
+    width: 370px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center">
+    <h1>Add Product</h1>
+    <form action="#" th:action="@{/new-user}" th:object="${user}" method="POST" style="gap:10px" class="d-flex flex-column justify-content-start">
+        <input type="text" th:field="*{name}" placeholder="user name" class="form-control" required>
+        <input type="email" th:field="*{name}" placeholder="email" class="form-control" required>
+        <input type="password" th:field="*{brand}" placeholder="password" class="form-control" required>
+        <input type="submit" class="btn btn-info">
+    </form>
+
+
+
+</div>
+</body>
+</html>
